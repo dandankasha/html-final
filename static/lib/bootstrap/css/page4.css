@@ -1,0 +1,45 @@
+body{
+    background: black;
+}
+li{
+    list-style: none;
+}
+.div0{
+    margin-top: 10%;
+}
+.div1{
+    float: left;
+}
+
+.div2{
+    float: left;
+    background: white;
+}
+.div2 img{
+    float: left;  
+}
+#form span{
+    font-size: 1.1em;
+    color: #1a9f84;
+}
+ul li:nth-of-type(1){
+    margin-top: 40%;
+}
+ul li:nth-of-type(2){
+    margin-top: 10%;
+}
+.input1,.input2{
+    width: 60%;
+    border-radius: 6px;
+    border-color: #1a9f84;
+}
+.login{
+    margin-top: 7.4%;
+    text-align: center;
+}
+.btn1{
+    width: 60%;
+    border-radius: 6px;
+    border-color: #1a9f84;
+    background: #1a9f84;
+}

@@ -1,0 +1,71 @@
+body{
+    background:url(../../../images/game.png) no-repeat top center #C2E253;
+    font-family: '微软雅黑';
+    background-size: cover;
+    text-align: center;
+    color: #333;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+img {
+    
+    border: 0;
+}
+.div0{
+    margin-top: 2%;
+}
+.div1{
+    position: relative;
+}
+.ul1{
+    position: absolute;
+    top:48%;
+    z-index: 99;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+}
+.ul1 li{
+    text-align: center;
+    width: 18%;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-radius: 15px;
+}
+@media (max-width: 480px) { 
+    .ul1 li{
+        font-size: 90%;
+    }
+ } 
+
+.ul1 li:hover{
+    border: 2px solid rgb(92, 28, 26);
+    cursor: pointer;
+}
+.ul1 li:active,.ul1 li:after{
+    background: rgb(92, 28, 26);
+}
+.ul1 li a{
+    color: white;
+}
+.div2{
+    margin-top: 25%;
+}
+.ul2{
+   
+}
+.ul2 li{
+    width: 25%; 
+    display: inline-block;
+}
+.ul2 li img{
+    transition:all 0.2s ease-in;
+}
+.ul2 li img:hover{
+    transform:scale(1.1,1.1); 
+}

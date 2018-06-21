@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>加入我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/page3.css')}}" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".nav1" data-offset="100">
+    <div class="navbar nav1">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active">
+                    <a href="#nav">松鼠导航</a>
+                </li>
+                <li>
+                    <a href="#zhaopin">社会招聘</a>
+                </li>
+                <li>
+                    <a href="#xincou">薪酬福利</a>
+                </li>
+                <li>
+                    <a href="#zhiduoshao">松鼠知多少</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-default" id="nav">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2 navbar-header">
+                            <a href="#" class="navbar-brand">
+                                <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
+                            </a>
+
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse1">
+                                <span class="sr-only">汉堡按钮</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-sm-8 col-sm-offset-1 collapse navbar-collapse" id="navbar-collapse1">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="{{url_for('index')}}">主页</a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('about')}}">关于我们</a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('join')}}">加入我们</a>
+                                </li>
+                                {% if name %}
+                                <li>
+                                    <a href="#">{{name}}</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="{{url_for('loginout')}}">注销</a>
+                                </li>
+                                {% else %}
+                                <li>
+                                    <a href="{{url_for('login')}}">登录</a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('register')}}">注册</a>
+                                </li>
+                                {% endif %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">联系我们
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">在线调戏</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url_for('query')}}" target="_Blank">电子发票查询</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">大客户团购</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">商务合作</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">媒体访问</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="navbar-form navbar-left">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section>
+        <div class="container-fluid div0">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form class="form-search">
+                        <div class="div1">
+                            <div class="div2">
+                                <input type="text" class="input-medium search-query" placeholder="职位关键词">
+                            </div>
+                            <button type="submit" class="btn">搜索职位</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="zhaopin">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="h">社会招聘</h1>
+
+                </div>
+
+            </div>
+            <div class="row div3">
+                <div class="col-xs-12">
+                    <form class="form-search">
+                        <div class="div1">
+                            <div class="div2">
+
+                                <input type="text" class="input-medium search-query" placeholder="职位关键词">
+                            </div>
+                            <button type="submit" class="btn">搜索职位</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>动画特技师</p>
+                        <P>松鼠娱乐&nbsp;|&nbsp;技术类&nbsp;|&nbsp;安徽&nbsp;芜湖市</P>
+                        <p>发布时间：&nbsp;2018-06-06</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>财务信息产品经理</p>
+                        <P>财务核算中心&nbsp;|&nbsp;技术类&nbsp;|&nbsp;安徽&nbsp;芜湖市</P>
+                        <p>发布时间：&nbsp;2018-06-01</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>产品货品合伙人（货品专家）</p>
+                        <P>产品经营体&nbsp;|&nbsp;产品类&nbsp;|&nbsp;安徽&nbsp;芜湖市</P>
+                        <p>发布时间：&nbsp;2018-06-01</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>产品质量合伙人（质量专家）</p>
+                        <P>产品经营体&nbsp;|&nbsp;职能类&nbsp;|&nbsp;安徽&nbsp;芜湖市</P>
+                        <p>发布时间：&nbsp;2018-06-01</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>京东平台内容专员</p>
+                        <P>电商云销售经营体</P>
+                        <p>发布时间：&nbsp;2018-06-01</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>手淘内容运营专员</p>
+                        <P>电商云销售经营体&nbsp;|&nbsp;技术类&nbsp;|&nbsp;江苏&nbsp;南京市</P>
+                        <p>发布时间：&nbsp;2018-06-01</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>零售空间设计师（主管）</p>
+                        <P>总公司&nbsp;|&nbsp;技术类&nbsp;|&nbsp;江苏&nbsp;南京市</P>
+                        <p>发布时间：&nbsp;2018-05-18</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            <span>[优先]&nbsp;</span>3D动画师（松鼠娱乐）</p>
+                        <P>松鼠娱乐&nbsp;|&nbsp;技术类&nbsp;|&nbsp;安徽&nbsp;芜湖市</P>
+                        <p>发布时间：&nbsp;2017-12-28</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            高级JAVA开发工程师</p>
+                        <P>总公司&nbsp;|&nbsp;技术类&nbsp;|&nbsp;江苏&nbsp;南京市</P>
+                        <p>发布时间：&nbsp;2018-06-07</p>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="a1 clearfix">
+                        <p>
+                            体验专家（拼多多客服）</p>
+                        <P>电商云销售经营体&nbsp;|&nbsp;销售类&nbsp;|&nbsp;安徽&nbsp;芜湖市</P>
+                        <p>发布时间：&nbsp;2018-06-07</p>
+                    </a>
+                </div>
+                <div class="col-xs-12 div4">
+                    <p>
+
+                        <button class="btn btn-large" type="button">查看全部职位</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="xincou">
+
+            <div class="col-xs-12">
+                <h1 class="h">薪酬福利</h1>
+
+            </div>
+            <div class="col-xs-12">
+                <img width="100%" src="{{url_for('static',filename='images/97d4522f-0836-4bcc-b488-e16b7d4386cd.png')}}">
+                <img width="100%" src="{{url_for('static',filename='images/f5292bef-607d-49d0-869a-03122ca7e02d.png')}}">
+                <img width="100%" src="{{url_for('static',filename='images/2088fdf9-4b33-4ce3-b876-61612fb7bca4.png')}}">
+            </div>
+
+
+        </div>
+        <div class="container div5" id="zhiduoshao">
+            <div class="col-xs-12">
+                <h1 class="h">松鼠知多少</h1>
+            </div>
+            <div class="col-xs-12">
+                <img width="100%" src="{{url_for('static',filename='images/1af51583-fecd-4bc5-819d-a69deb326496.png')}}">
+                <img width="100%" src="{{url_for('static',filename='images/58fa9c3b-b78b-473d-b6a8-8dc7e33ee04b.png')}}">
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="mytab">
+                        <div class="left">
+                            <img src="{{url_for('static',filename='images/ITE_r32_c2.png')}}" width="30%" height="30%" alt="" />
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="mytab">
+                        <div class="left img-box">
+                            <img src="{{url_for('static',filename='images/ITE_r35_c20.png')}}" width="30%" height="50%" alt="" />
+                            <img src="{{url_for('static',filename='images/LITE_r40_c35.png')}}" width="30%" height="50%" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="mytab">
+                        <div class="left">
+                            <img src="{{url_for('static',filename='images/ITE_r33_c29.png')}}" alt="" />
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>来自松鼠的服务</th>
+                                <th>合作项目</th>
+                                <th>其他</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                <a>在线调戏</a>
+                            </td>
+                            <td>
+                                <a href="{{url_for('game')}}" target="_Blank">松鼠游戏</a>
+                            </td>
+                            <td>
+                                <a href="{{url_for('query')}}" target="_Blank">电子发票查询</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a>大客户团购</a>
+                            </td>
+                            <td>
+                                <a>商务合作</a>
+                            </td>
+                            <td>
+                                <a>媒体访问</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a>松鼠廉政</a>
+                            </td>
+                            <td>
+                                <a>免责声明</a>
+                            </td>
+                            <td>
+                                <a>相关网址</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row foot">
+                <img src="{{url_for('static',filename='images/LITE_r41_c7.png')}}">
+                <span class="span1">松鼠星球主人服务热线：
+                    <span class="span2">400-800-4900</span>
+                </span>
+            </div>
+            <div class="row">
+                <p style="text-align: center;margin-top: 30px;">@2018安徽省芜湖市三只松鼠股份有限公司版权所有　　京ICP备14034406号-2</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="{{url_for('static',filename='lib/jquery/jquery-1.11.0.min.js')}}"></script>
+<script src="{{url_for('static',filename='lib/bootstrap/js/bootstrap.min.js')}}"></script>
+
+</html>

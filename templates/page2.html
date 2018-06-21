@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>关于我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/page2.css')}}" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".nav1" data-offset="100">
+    <div class="navbar nav1">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active">
+                    <a href="#nav">松鼠导航</a>
+                </li>
+                <li>
+                    <a href="#jiaru">加入我们</a>
+                </li>
+                <li>
+                    <a href="#meiti">媒体报道</a>
+                </li>
+                <li>
+                    <a href="#xiaozhan">资源小站</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-default" id="nav">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2 navbar-header">
+                            <a href="#" class="navbar-brand">
+                                <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
+                            </a>
+
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse1">
+                                <span class="sr-only">汉堡按钮</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-sm-8 col-sm-offset-1 collapse navbar-collapse" id="navbar-collapse1">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="{{url_for('index')}}">主页</a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('about')}}">关于我们</a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('join')}}">加入我们</a>
+                                </li>
+                                {% if name %}
+                                <li>
+                                    <a href="#">{{name}}</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="{{url_for('loginout')}}">注销</a>
+                                </li>
+                                {% else %}
+                                <li>
+                                    <a href="{{url_for('login')}}">登录</a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('register')}}">注册</a>
+                                </li>
+                                {% endif %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">联系我们
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">在线调戏</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url_for('query')}}" target="_Blank">电子发票查询</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">大客户团购</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">商务合作</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">媒体访问</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="navbar-form navbar-left">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">
+                                    <span class="	glyphicon glyphicon-search"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+
+                <img width="100%" src="{{url_for('static',filename='images/boy.png')}}">
+
+            </div>
+        </div>
+        <div class="container con1" id="jiaru">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 div0 block1">
+                    <div class="div1">
+                        <div class="div2">
+                            <img width="80%" src="{{url_for('static',filename='images/LITE_r12_c3.png')}}">
+                            <p>和我们一起,实现自己的梦想, 创造独特的松鼠世界
+                            </p>
+                        </div>
+                        <div class="div3">
+                            <ul class="ul1">
+                                <li class="li1">
+                                    <a style="font-size: 1.3em; font-weight: 600;  color: black;">
+                                        <span class="span3">Chapter One.</span>松鼠窝展示
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>01. 环境展示</a>
+                                </li>
+
+                            </ul>
+                            <ul class="ul1">
+                                <li class="li1">
+                                    <a style="font-size: 1.3em; font-weight: 600;  color: black;">
+                                        <span class="span3">Chapter Two. </span>我们需要你
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>01. 松鼠窝招聘</a>
+                                </li>
+                                <li>
+                                    <a>02. 投食店招聘</a>
+                                </li>
+                                <li>
+                                    <a>03. 松鼠小镇招聘</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 dis1 div0">
+                    <div class="div5">
+                        <p>松鼠窝展示</p>
+                        <div class="div4">
+                            <p>环境展示</p>
+                            <ul>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/1.png')}}">
+                                    <p>爱廉说展厅</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/2.png')}}">
+                                    <p>松鼠洗脑院</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/3.png')}}">
+                                    <p>神农试吃堂</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/4.png')}}">
+                                    <p>天空农场</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/5.png')}}">
+                                    <p>鼠味相投</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/6.png')}}">
+                                    <p>旋转滑梯</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/7.png')}}">
+                                    <p>松鼠嘿咻馆</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/8.png')}}">
+                                    <p>水+轻食吧</p>
+                                </li>
+                                <li>
+                                    <img src="{{url_for('static',filename='images/9.png')}}">
+                                    <p>森林氧吧</p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container  con1" id="meiti">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 dis2 div0">
+                    <div class="div1">
+                        <p>公众媒体新闻</p>
+                        <div class="div6">
+                            <p>平面媒体</p>
+                            <ul>
+                                <li>
+                                    <a>01.安徽省文化厅厅长袁华莅临三只松鼠考察调研</a>
+                                </li>
+                                <li>
+                                    <a>02.关于有人冒充我司员工实行诈骗行为的重大事…</a>
+                                </li>
+                                <li>
+                                    <a>03.国家食品药品监管总局刘佩智同志来松鼠就食…</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="div6">
+                            <p>Online媒体</p>
+                            <ul>
+                                <li>
+                                    <a>01.三只松鼠章燎原：全行业共创坚果行业的双十… </a>
+                                </li>
+                                <li>
+                                    <a>02.携手91桌面 | 吃货轰趴季火三只松鼠爆来袭…</a>
+                                </li>
+                                <li>
+                                    <a>03.三只松鼠发展获点赞</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="div6">
+                            <p>独立媒体及追萌族主人</p>
+                            <ul>
+                                <li>
+                                    <a>01.《新华网》：三只松鼠“双十一”销售额突破5…</a>
+                                </li>
+                                <li>
+                                    <a>02.《凤凰芜湖》：5.08亿！芜湖电商三只松鼠双十…</a>
+                                </li>
+                                <li>
+                                    <a>03.《电商在线》独家 | 章燎原：萌贱之后 三只松…</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 div0 block2">
+                    <div class="div1">
+                        <div class="div2">
+                            <img width="80%" src="{{url_for('static',filename='images/LITE_r26_c9.png')}}">
+                            <p>他们眼中的松鼠,和松鼠眼中的世界
+                            </p>
+                        </div>
+                        <div class="div3">
+                            <ul class="ul1">
+                                <li class="li1">
+                                    <a style="font-size: 1.3em; font-weight: 600;  color: black;">
+                                        <span class="span3">Chapter One.</span>公众媒体新闻
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>01. 平面媒体</a>
+                                </li>
+                                <li>
+                                    <a>02. Online媒体</a>
+                                </li>
+                                <li>
+                                    <a>03. 独立媒体及追萌族主人</a>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container con1 con2" id="xiaozhan">
+            <div class="row">
+
+                <div class="col-xs-6 col-sm-6 div0 block3">
+                    <div class="div1">
+                        <div class="div2">
+                            <img width="80%" src="{{url_for('static',filename='images/LITE_r30_c3.png')}}">
+                            <p>这里有更多奇趣内容,等你探索
+                            </p>
+                        </div>
+                        <div class="div3">
+                            <ul class="ul1">
+                                <li class="li1">
+                                    <a style="font-size: 1.3em; font-weight: 600;  color: black;">
+                                        <span class="span3">Chapter One.</span>动漫系列
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>01. 三只松鼠动画片</a>
+                                </li>
+                                <li>
+                                    <a>02. 贱萌三国</a>
+                                </li>
+                                <li>
+                                    <a>03. 松鼠嗑壳课</a>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 dis3 div0">
+                    <div class="div1">
+                        <div class="div3">
+                            <ul class="ul1">
+                                <li class="li1">
+                                    <a style="font-size: 1.3em; font-weight: 600;  color: black;">
+                                        <span class="span3">Chapter Two.</span>互动内容
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>01. 松鼠主题壁纸</a>
+                                </li>
+                                <li>
+                                    <a>02. 松鼠表情包</a>
+                                </li>
+
+                            </ul>
+                            <ul class="ul1">
+                                <li class="li1">
+                                    <a style="font-size: 1.3em; font-weight: 600;  color: black;">
+                                        <span class="span3">Chapter Three.</span>版权引用
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>01. 松鼠商标</a>
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="mytab">
+                    <div class="left">
+                        <img src="{{url_for('static',filename='images/ITE_r32_c2.png')}}" width="30%" height="30%" alt="" />
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="mytab">
+                    <div class="left img-box">
+                        <img src="{{url_for('static',filename='images/ITE_r35_c20.png')}}" width="30%" height="50%" alt="" />
+                        <img src="{{url_for('static',filename='images/LITE_r40_c35.png')}}" width="30%" height="50%" alt="" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="mytab">
+                    <div class="left">
+                        <img src="{{url_for('static',filename='images/ITE_r33_c29.png')}}" alt="" />
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>来自松鼠的服务</th>
+                            <th>合作项目</th>
+                            <th>其他</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <a>在线调戏</a>
+                        </td>
+                        <td>
+                            <a href="{{url_for('game')}}" target="_Blank">松鼠游戏</a>
+                        </td>
+                        <td>
+                            <a href="{{url_for('query')}}" target="_Blank">电子发票查询</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>大客户团购</a>
+                        </td>
+                        <td>
+                            <a>商务合作</a>
+                        </td>
+                        <td>
+                            <a>媒体访问</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>松鼠廉政</a>
+                        </td>
+                        <td>
+                            <a>免责声明</a>
+                        </td>
+                        <td>
+                            <a>相关网址</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="row foot">
+            <img src="{{url_for('static',filename='images/LITE_r41_c7.png')}}">
+            <span class="span1">松鼠星球主人服务热线：
+                <span class="span2">400-800-4900</span>
+            </span>
+        </div>
+        <div class="row">
+            <p style="text-align: center;margin-top: 30px;">@2018安徽省芜湖市三只松鼠股份有限公司版权所有　　京ICP备14034406号-2</p>
+        </div>
+    </div>
+</footer>
+<script src="{{url_for('static',filename='lib/jquery/jquery-1.11.0.min.js')}}"></script>
+<script src="{{url_for('static',filename='lib/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{url_for('static',filename='lib/bootstrap/js/page2.js')}}"></script>
+
+</html>

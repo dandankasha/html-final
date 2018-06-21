@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/login.css')}}" rel="stylesheet">
+    <script src="{{url_for('static',filename='lib/jquery/jquery-1.11.0.min.js')}}"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $(".btn1").click(function () {
+            var username = $('#username').val();
+            var password = $('#password').val();
+            $.post("http://127.0.0.1:5000/login/", { "USERNAME": username, 'PASSWORD': password }, function (data, status) {
+                if(data.USERNAME==username && data.PASSWORD==password)
+                {   alert("登录成功！"); 
+                    window.location.href = "{{url_for('index')}}";
+                }
+                else{
+                    alert("密码输入错误！");
+                }
+                });
+        });
+    });
+</script>
+<body>
+    <div class="div4">
+        <img src="{{url_for('static',filename='images/logo.png')}}">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <div class="div1">
+                    <h2>登录你的账户</h2>
+                    <form id="form" method="post" action="/login/" >
+                        <ul>
+                            <li>
+                                <span>账号/邮箱:</span>
+                                <div class="div3">
+                                    <input class="input1" type="text" placeholder="请输入账号/邮箱" name="username" id="username">
+                                </div>
+                                <div id="userNameId"></div>
+
+                            </li>
+                            <li>
+                                <span>密码：</span>
+                                <div class="div5">
+                                    <input class="input2" type="password" placeholder="请输入密码" name="password" id="password">
+                                </div>
+                                <div id="pwdId"></div>
+
+                            </li>
+                            <li>
+                                <p>没有账号？
+                                    <span>
+                                        <a href="{{url_for('register')}}">创建一个！</a>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="login">
+                                <button class="btn1" type="submit" value="登录">登录</button>
+                            </li>
+                            <li>
+                                <hr/>
+                            </li>
+                            <li>
+                                <p class="p1">通过其他方式登录</p>
+                                <div class="div2">
+                                    <a>
+                                        <img src="{{url_for('static',filename='images/l_1_h.png')}}">
+                                    </a>
+                                    <a>
+                                        <img src="{{url_for('static',filename='images/l_4_h.png')}}">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="{{url_for('static',filename='lib/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{url_for('static',filename='lib/bootstrap/js/login.js')}}"></script>
+
+</html>

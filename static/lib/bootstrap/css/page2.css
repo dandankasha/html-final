@@ -1,0 +1,207 @@
+
+.navbar-default .navbar-nav>li a {
+    top: 10px;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    color:#919191;
+    margin-bottom: 1.1em;
+}
+.navbar-default .navbar-nav> li >a:hover,
+.navbar-default .navbar-nav> li >a:focus,
+.navbar-default .navbar-nav> li >a:active {
+    background:#D96B66;
+    color: white;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.navbar-header{
+        padding: 0 0;
+}
+.collapse.navbar-collapse{
+    padding: 0 0;
+}
+.navbar-default{
+    padding: 1.5em 0;
+    background-color: #000000;
+    box-shadow: 12px -5px 39px 5px #eeaa17;
+}
+footer{
+    background: rgba(20, 19, 19, 0.521);
+    padding: 20px;
+    min-height: 100px;
+}
+li{
+   list-style: none;
+}
+a{
+    text-decoration: none;
+}
+table td,table th{
+    border-top: none;
+    text-align: center;
+}
+table thead th{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+table a{
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #0a080873;
+}
+table a:hover{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.mytab{
+    text-align: center;
+}
+ul{
+    padding:0 0;
+}
+.img-box{
+    padding-bottom: 9%;
+}
+.foot{
+    margin-left: 10%;
+}
+.span1{
+    font-size: 1.2em;
+    color: white;
+    font-weight: 600;
+}
+.span2{
+    font-size: 1.2em;
+    color: red;
+    font-weight: 600;
+}
+body{
+    background:url(../../../images/bgy.jpg) no-repeat fixed center;
+}
+.con1{
+    margin-top: 6%;
+    }
+.div0{
+    background-color: white;
+}
+.div1{
+    margin: 10%;
+}
+.div2{
+    margin: 10% 0;
+}
+.div3 ul{
+    margin: 15% 0;
+    padding:0;
+}
+.div2 p{
+   color: rgb(255, 123, 0);
+   margin: 3% 0;
+   font-size: 1.2em;
+}
+.div3 li{
+   margin: 4% 0;
+}
+.div3 ul li a{
+   color: rgba(99, 96, 96, 0.76);
+   font-size: 1.2em;
+}
+.li1 a{
+   font-size: 1.3em;
+   font-weight: 600;
+   color: black;
+}
+.span3{
+   color:rgb(255, 123, 0) ;
+}
+.block1 a:hover,.block2 a:hover,.block3 a:hover,.dis3 a:hover,.dis5 a:hover{
+    color: #eeaa17;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+}
+.div4{
+    margin: 3% 0 3% 0;
+}
+.div4 ul li{
+    float: left;
+    text-align: center;
+    margin: 3% 2% 3% 2%;
+}
+.div4 ul li p{
+    color: rgba(99, 96, 96, 0.76);
+    font-size: 1.1em;
+    margin-top: 5%;
+}
+.div5{
+    margin: 5% 5% 5% 5%;
+}
+.div6{
+    margin: 1% 0;
+}
+.div6 ul li{
+    margin-top:3%;
+}
+.div6 ul li a{
+    color: rgba(99, 96, 96, 0.76);
+}
+.dis1,.dis2{
+    display: none;
+}
+.dis1 p,.dis2 p{
+    font-weight: 600;
+    font-size: 1.2em;
+    color: black;
+    margin:6% 0;
+}
+.block2{
+    float: right;
+    padding-bottom: 15% ;
+}
+.dis3{
+    padding-bottom: 6%; 
+}
+.con2{
+    margin-bottom: 5%;
+}
+.nav1{
+    position: fixed;
+    left: 3%;
+    top: 30%;
+    z-index: 255;
+    width: 5%;
+}
+.nav1 li{
+    padding-top: 4%;
+    font-size: 90%;
+    text-align: center;
+    border: 1px solid white;
+  
+}
+.nav1 .nav{
+    border: 1px solid white;
+    border-radius: 5%;
+}
+.nav1 li a{
+    padding: 30% 0;
+    font-weight: 600;
+    color: rgb(243, 69, 150);
+}
+.active{
+    background: #c2c2c2a4;
+}
+@media (max-width: 480px) { 
+    .nav1{
+        width: 10%;
+    }
+   
+    .nav1 li a{
+        padding: 30% 0;
+        font-weight: 600;
+        color: rgb(68, 219, 38);
+    }
+ } 

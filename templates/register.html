@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='lib/bootstrap/css/register.css')}}" rel="stylesheet">
+    <script src="{{url_for('static',filename='lib/jquery/jquery-1.11.0.min.js')}}"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $(".btn1").click(function () {
+            var username = $('#userName').val();
+            var password = $('#pwd').val();
+            var phone = $('#tel').val();
+            var email = $('#email').val();
+            $.post("http://127.0.0.1:5000/register/", { "USERNAME": username, 'PASSWORD': password ,'PHONE':phone,'EMAIL':email}, function (data, status) {
+                if(data.flag=='1'){ 
+                    alert("注册成功！")  
+                    window.location.href = "{{url_for('index')}}";
+                    
+                }
+                else{
+                    alert("注册失败！");
+                }
+            });
+        });
+
+    });
+</script>
+<body>
+    <div class="div4">
+        <img src="{{url_for('static',filename='images/logo.png')}}">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <div class="div1">
+                    <h2>创建你的账户</h2>
+                    <form id="registerForm" action="" method="post" name="myform">
+                            <dl>
+                                <dt>通行证用户名：</dt>
+                                <dd class="dd1"><input type="text" id="userName" class="inputs userWidth"/> </dd>
+                                <dd><div id="userNameId"></div></dd>
+                            </dl>
+                            <dl>
+                                <dt>登录密码：</dt>
+                                <dd class="dd2"><input type="password" id="pwd" class="inputs"/></dd>
+                                <dd><div id="pwdId"></div></dd>
+                            </dl>
+                            <dl>
+                                <dt>确定密码：</dt>
+                                <dd class="dd3"><input type="password" id="repwd" class="inputs"/></dd>
+                                <dd><div id="repwdId"></div></dd>
+                            </dl>
+                            <dl>
+                                <dt>关联手机号：</dt>
+                                <dd class="dd4"><input type="text" id="tel" class="inputs"/></dd>
+                                <dd><div id="telId"></div></dd>
+                            </dl>
+                            <dl>
+                                <dt>验证邮箱：</dt>
+                                <dd class="dd5"><input type="email" id="email" class="inputs"/></dd>
+                                <dd><div id="emailId"></div></dd>
+                            </dl>
+                            <dl>
+                                <dt></dt>
+                                <dd class="login"><input class="btn1" type="submit" value="注册"/></dd>
+                            </dl>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="{{url_for('static',filename='lib/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{url_for('static',filename='lib/bootstrap/js/register.js')}}"></script>
+
+</html>
