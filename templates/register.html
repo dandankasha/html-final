@@ -15,7 +15,7 @@
             var password = $('#pwd').val();
             var phone = $('#tel').val();
             var email = $('#email').val();
-            $.post("http://127.0.0.1:5000/register/", { "USERNAME": username, 'PASSWORD': password ,'PHONE':phone,'EMAIL':email}, function (data, status) {
+            $.post("{{url_for('register')}}/", { "USERNAME": username, 'PASSWORD': password ,'PHONE':phone,'EMAIL':email}, function (data, status) {
                 if(data.flag=='1'){ 
                     alert("注册成功！")  
                     window.location.href = "{{url_for('index')}}";

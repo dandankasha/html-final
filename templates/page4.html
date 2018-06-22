@@ -14,7 +14,7 @@
         $(".btn1").click(function () {
             var id = $('#ID').val();
             var phone = $('#PHONE').val();
-            $.post("http://127.0.0.1:5000/query/", { "ID": id, 'PHONE': phone }, function (data, status) {
+            $.post("{{url_for('query')}}", { "ID": id, 'PHONE': phone }, function (data, status) {
                 if(data.STATUS)
                 {   alert("单号："+id+";"+"状态："+data.STATUS); 
                    
