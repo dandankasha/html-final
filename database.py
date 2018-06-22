@@ -63,5 +63,16 @@ def insert(username,password,phone,email):
     c.execute("INSERT INTO user (USERNAME,PASSWORD,PHONE,EMAIL) VALUES ('%s','%s','%s','%s')"%(username,password,phone,email))
     conn.commit()
     conn.close()
+
+def selectaccount(id,phone):
+    conn = sqlite3.connect('test.db')
+    c = conn.cursor()
+    status=""
+    cursor = c.execute("SELECT STATUS from account where ID = '%s' AND PHONE = '%s' " % (id,phone) )
+    for row in cursor:
+        status = row[0]     
+    conn.close()
+    return status
+
     
 

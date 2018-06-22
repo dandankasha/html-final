@@ -69,10 +69,17 @@ def join():
     else:
         return render_template("page3.html")  
 
-@app.route('/query/')
+@app.route('/query/',methods=['GET','POST'])
 def query():
-    return  render_template('page4.html')
-
+    if request.method == 'GET':
+        return render_template('page4.html')
+    else:      
+        a=request.form['ID']
+        b=request.form['PHONE']
+        d=database.selectaccount(a,b)
+        f={'ID':a,'STATUS':d}      
+        return jsonify(f)
+        
 @app.route('/game/')
 def game():
     return  render_template('page5.html')
