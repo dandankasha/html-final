@@ -34,6 +34,7 @@ def loginout():
 
 @app.route('/register/', methods=['GET','POST'])
 def register():
+    global name
     if request.method =='GET':
         return render_template('register.html')
     else:
@@ -42,9 +43,15 @@ def register():
         b=request.form['PASSWORD']
         c=request.form['PHONE']
         d=request.form['EMAIL']
-        database.insert(a,b,c,d)
-        f={'flag':'1'}
+        e=database.select(a)
+        if e:
+            f={'flag':'0'}
+        else:
+            name=a
+            database.insert(a,b,c,d)
+            f={'flag':'1'}
         return jsonify(f)
+
 @app.route('/about/')
 def about():
     global name

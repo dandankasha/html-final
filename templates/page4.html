@@ -14,10 +14,10 @@
         $(".btn1").click(function () {
             var id = $('#ID').val();
             var phone = $('#PHONE').val();
-            $.post("{{url_for('query')}}", { "ID": id, 'PHONE': phone }, function (data, status) {
-                if(data.STATUS)
-                {   alert("单号："+id+";"+"状态："+data.STATUS); 
-                   
+            alert('www');
+            $.post("{{url_for('query')}}", { "ID": id, "PHONE": phone }, function (data, status) {
+                if(data.STATUS){   
+                    alert("单号："+id+";"+"状态："+data.STATUS);                 
                 }
                 else{
                     alert("查询未成功！");
@@ -55,6 +55,4 @@
     </div>
 </body>
 <script src="{{url_for('static',filename='lib/bootstrap/js/bootstrap.min.js')}}"></script>
-<script src="{{url_for('static',filename='lib/bootstrap/js/page4.js')}}"></script>
-
 </html>

@@ -13,9 +13,10 @@ def select(username):
 def insert(username,password,phone,email):
     conn = sqlite3.connect('test.db')
     c = conn.cursor()
-    c.execute("INSERT INTO user (USERNAME,PASSWORD,PHONE,EMAIL) VALUES ('%s','%s','%s','%s')"%(username,password,phone,email))
+    a=c.execute("INSERT OR IGNORE INTO user (USERNAME,PASSWORD,PHONE,EMAIL) VALUES ('%s','%s','%s','%s')"%(username,password,phone,email))
     conn.commit()
     conn.close()
+    return a
 
 def selectaccount(id,phone):
     conn = sqlite3.connect('test.db')
