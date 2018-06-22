@@ -76,13 +76,6 @@ def query():
 def game():
     return  render_template('page5.html')
     
-@app.route("/list/")
-def my_list():
-    return "list"
-@app.route("/article/<id>/")
-def article(id):
-    return "你的id是：%s" % id
-
 if __name__ == '__main__':
     app.run(debug=True)
 
