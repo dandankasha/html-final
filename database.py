@@ -2,51 +2,6 @@
 
 import sqlite3
 
-conn = sqlite3.connect('test.db')
-
-print ("Opened database successfully")
-
-
-#!/usr/bin/python
-
-
-
-
-#c = conn.cursor()
-
-#c.execute('''CREATE TABLE user
-##      (
-#       USERNAME  TEXT  PRIMARY KEY    NOT NULL,
- #      PASSWORD        TEXT    NOT NULL,
-#       PHONE           TEXT,
-##       EMAIL           TEXT)''')
-#print ("Table created successfully")
-#conn.commit()
-#conn.close()
-
-
-#!/usr/bin/python
-'''
-conn = sqlite3.connect('test.db')
-print ("Opened database successfully")
-c = conn.cursor()
-
-c.execute("INSERT INTO user (ID,USERNAME,PASSWORD,PHONE,EMAIL) \
-      VALUES (2, 'Paul12', '222222', '18888888888', '1968171534@qq.com')")
-
-
-conn.commit()
-print ("Records created successfully")
-conn.close()
-'''
-
-
-#!/usr/bin/python
-
-
-
-
-
 def select(username):
     conn = sqlite3.connect('test.db')
     c = conn.cursor()

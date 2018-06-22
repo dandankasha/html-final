@@ -10,18 +10,10 @@ name=""
 def index():
     global name
     if(name!=""):
-    #context={
-    #    "username":"小达达",
-    #    "gender":"男",
-    #    "age":18
-   # }
         return render_template("index.html",name=name)
     else:
         return render_template('index.html')
-    #print (url_for("my_list"))
-    #print (url_for("article",id="123"))
-    #return redirect(url_for("my_list"))
-    #return 'Hello World!'
+
 @app.route('/login/' , methods=['GET','POST'])
 def login():
     global name
@@ -79,7 +71,7 @@ def query():
         d=database.selectaccount(a,b)
         f={'ID':a,'STATUS':d}      
         return jsonify(f)
-        
+
 @app.route('/game/')
 def game():
     return  render_template('page5.html')
