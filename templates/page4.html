@@ -15,12 +15,12 @@
             var id = $('#ID').val();
             var phone = $('#PHONE').val();
             $.post("http://127.0.0.1:5000/query/", { "ID": id, 'PHONE': phone }, function (data, status) {
-                if(data.USERNAME==username && data.PASSWORD==password)
-                {   alert("登录成功！"); 
-                    window.location.href = "{{url_for('index')}}";
+                if(data.STATUS)
+                {   alert("单号："+id+";"+"状态："+data.STATUS); 
+                   
                 }
                 else{
-                    alert("密码输入错误！");
+                    alert("查询未成功！");
                 }
                 });
         });
